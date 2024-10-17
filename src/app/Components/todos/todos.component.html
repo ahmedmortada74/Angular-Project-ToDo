@@ -1,0 +1,23 @@
+<section class="todo-section">
+    <div class="container" >
+        <form class="todo-form"  (ngSubmit)="createToDo()">
+            <input [(ngModel)]="newToDo.title" type="text" id="new-task" name="title" placeholder="Add new Task">
+            <button type="submit" class="btn">Add</button>
+        </form>
+
+
+
+   @for( todo of todos ; track todo.id){
+    <ul class="todo-list" id="todo-list">
+        <li>
+            <input [(ngModel)]="todo.completed" type="checkbox" id="task-@todo.id" value="" class="task-checkbox bg-praimer">
+            <span class="span" [ngClass]="{'text-decoration-line-through' : todo.completed}" [routerLink]="['./todos',todo.id]">{{todo.title}}</span>
+            <button type="submit" class="delete-btn" (click)="deleteToDo(todo.id)">Delete</button>
+        </li>
+       
+    </ul>
+
+   }
+        
+</div>
+</section>
