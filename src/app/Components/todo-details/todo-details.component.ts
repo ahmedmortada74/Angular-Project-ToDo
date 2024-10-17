@@ -4,13 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { ToDo } from '../../Models/to-do';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { ToDoService } from '../../Services/to-do.service';
+import { routes } from '../../app.routes';
 
 @Component({
   selector: 'app-todo-details',
   standalone: true,
   imports: [
     FormsModule,
-    CommonModule
+    CommonModule,
+    
+
+    
   ],
   templateUrl: './todo-details.component.html',
   styleUrl: './todo-details.component.css'

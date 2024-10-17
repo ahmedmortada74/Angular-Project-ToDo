@@ -1,12 +1,13 @@
 @if (todo){
 <div class="container">
     <div class="todo-details">
-        <h1>Todo Details :{{todo.title}}</h1>
-        <h1>Todo Details :{{todo.completed}}</h1>
-        <h1>Todo Details :{{todo.id}}</h1>
+        <h1>title  :{{todo.title}}</h1>
+        <h1>Status  :{{todo.completed}}</h1>
+        <!-- <h1>Todo Details :{{todo.id}}</h1> -->
         <form (ngSubmit)="updateToDo()" #form1="ngForm">
             <label for="task-title">Task Title:</label>
-            <input [(ngModel)]="todo.title" #input1="ngModel"  name="title" required pattern="[A-Z-a-z]{3,}"
+            <input [(ngModel)]="todo.title" #input1="ngModel"  name="title" required 
+            
             [ngClass]="{'is-invalid' : (input1.touched || input1.dirty && input1.invalid)}"
              type="text" id="task-title" placeholder="Todo Title" required>
             
@@ -18,5 +19,9 @@
         </form>
     </div>
 </div>
-<h1>{{input1?.errors |json}}</h1>
+<div class="container">
+
+    <h1>{{input1?.errors |json}}</h1>
+</div>
+
 }

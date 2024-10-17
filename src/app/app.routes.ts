@@ -10,7 +10,7 @@ export const routes: Routes = [
     {path : '', redirectTo : '/todos', pathMatch : 'full'},
     {path : 'home', component : HomeComponent, title : 'Home'},
     {path : 'todos', component : TodosComponent, title : 'todos'},
-    {path : 'todos:id', component : TodoDetailsComponent, title : ' to do Detials'},
+    {path : 'todos/:id', component : TodoDetailsComponent, title : ' to do Detials'},
     {path : 'contactus', component : ContactusComponent, title : 'Contact Us'},
     {path : 'AboutUs', component : AboutusComponent, title : 'AboutUs'},
     {path : '**', component :NotFoundComponent, title : 'Not Found'},
