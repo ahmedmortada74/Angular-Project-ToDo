@@ -20,6 +20,8 @@ import { routes } from '../../app.routes';
   styleUrl: './todo-details.component.css'
 })
 export class TodoDetailsComponent implements OnInit {
+  TitleDetails :string ="Todo Details"
+  ImageLink :string ="https://th.bing.com/th/id/OIP.mfz5bkoZJkS2ufRGVZ5H2wHaGw?w=1920&h=1753&rs=1&pid=ImgDetMain"
   todo :ToDo | undefined;
   constructor (private route:ActivatedRoute , 
     private todoService:ToDoService , 

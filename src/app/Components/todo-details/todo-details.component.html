@@ -1,27 +1,35 @@
-@if (todo){
-<div class="container">
-    <div class="todo-details">
-        <h1>title  :{{todo.title}}</h1>
-        <h1>Status  :{{todo.completed}}</h1>
-        <!-- <h1>Todo Details :{{todo.id}}</h1> -->
-        <form (ngSubmit)="updateToDo()" #form1="ngForm">
-            <label for="task-title">Task Title:</label>
-            <input [(ngModel)]="todo.title" #input1="ngModel"  name="title" required 
+@if (todo) {
+    <h1>{{TitleDetails}}</h1>
+    <div class="container">
+        <!-- Left section with task details in a table -->
+        <div class="left-section">
+            <table class="todo-table">
+                <tr>
+                    <th  >Title</th>
+                    <td >{{todo.title}}</td>
+                </tr>
+                <tr>
+                    <th class="thth">Status</th>
+                    <td class="thth">{{todo.completed ? 'Completed' : 'Not Completed'}}</td>
+                </tr>
+            </table>
             
-            [ngClass]="{'is-invalid' : (input1.touched || input1.dirty && input1.invalid)}"
-             type="text" id="task-title" placeholder="Todo Title" required>
-            
-            <label for="completed">Completed:</label>
-            <input [(ngModel)]="todo.completed"
-            name="completed" type="checkbox" id="completed">
-            
-            <button [disabled]="form1.invalid" type="submit" class="update-btn">Update</button>
-        </form>
+            <form (ngSubmit)="updateToDo()" #form1="ngForm">
+                <label for="task-title">Task Title:</label>
+                <input [(ngModel)]="todo.title" #input1="ngModel" name="title" required 
+                    [ngClass]="{'is-invalid' : (input1.touched || input1.dirty && input1.invalid)}"
+                    type="text" id="task-title" placeholder="Todo Title" required>
+                
+                <label for="completed">Completed:</label>
+                <input [(ngModel)]="todo.completed" name="completed" type="checkbox" id="completed">
+                
+                <button [disabled]="form1.invalid" type="submit" class="update-btn">Update</button>
+            </form>
+        </div>
+
+        <!-- Right section with image -->
+        <div class="right-section">
+            <img [src]="ImageLink" alt="Todo Image" class="todo-image">
+        </div>
     </div>
-</div>
-<div class="container">
-
-    <h1>{{input1?.errors |json}}</h1>
-</div>
-
 }

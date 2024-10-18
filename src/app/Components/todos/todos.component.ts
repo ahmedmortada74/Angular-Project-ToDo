@@ -16,6 +16,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './todos.component.css'
 })
 export class TodosComponent implements OnInit {
+  Title :string ="Welcome to Todo List App";
+  ImageLink :string ="https://th.bing.com/th/id/OIF.oXWyiWuleeIx1mL0se8shA?rs=1&pid=ImgDetMain"
   todos :ToDo[] =[];
   newToDo :ToDo ={} as ToDo;
   constructor (private todoService :ToDoService){}

@@ -8,10 +8,22 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
 }
-h1{
-    margin-bottom: 50px;
-    color: #3366cc;
-}
+
+.styled-title {
+    
+    font-size: 36px; /* Adjust font size */
+    color: #156aca;     /* Adjust text color */
+    text-align: center; /* Center the text */
+    padding: 10px;   /* Add some padding */
+    background-color: #f0f0f0; /* Optional background */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 80px;
+    
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    
+    text-shadow: 1px 2px 4px rgba(77, 75, 75, 0.979);
+  }
+  
 
 .container {
     width: 100%;
@@ -38,7 +50,7 @@ h1{
     padding: 40px 20px;
     margin-top: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    
 }
 
 .todo-form {

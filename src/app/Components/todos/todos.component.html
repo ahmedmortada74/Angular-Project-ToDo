@@ -1,11 +1,11 @@
-<section class="todo-section">
+<section class="todo-section row">
+    <h1 class="styled-title">{{Title}}</h1>
+    <img style="width: 400px; height: 400px;" [src]="ImageLink" alt="">
     <div class="container" >
-         <h1>Welcome to Todo List App</h1>
         <form class="todo-form"  (ngSubmit)="createToDo()">
             <input [(ngModel)]="newToDo.title" type="text" id="new-task" name="title" placeholder="Add new Task">
-            <button type="submit" class="btn">Add</button>
+            <button type="submit" class="btn">Add Task</button>
         </form>
-
 
 
    @for( todo of todos ; track todo.id){
@@ -17,11 +17,7 @@
             <!-- <a  routerLink="/todos/{{todo.id}}">{{todo.title}}</a> -->
             <button type="submit" class="delete-btn" (click)="deleteToDo(todo.id)">Delete</button>
         </li>
-       
     </ul>
-    
-
-   }
-        
+   }   
 </div>
 </section>
