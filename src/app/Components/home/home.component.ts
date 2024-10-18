@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  ImageLink :string ="https://th.bing.com/th/id/OIF.oXWyiWuleeIx1mL0se8shA?rs=1&pid=ImgDetMain"
 
 }

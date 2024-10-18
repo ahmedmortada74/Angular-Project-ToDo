@@ -2,18 +2,23 @@
   "todos": [
     {
       "id": "b965",
-      "title": "Watch a movie",
-      "completed": false
+      "title": "Watch a movie 444",
+      "completed": true
     },
     {
       "id": "a12f",
       "title": "Read a new book",
-      "completed": false
+      "completed": true
     },
     {
       "id": "d5b5",
       "title": "Go to the gym",
       "completed": false
+    },
+    {
+      "id": "c892",
+      "title": "Playing1",
+      "completed": true
     }
   ]
 }
